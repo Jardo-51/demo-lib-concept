@@ -56,4 +56,4 @@ jobs:
       uses: maven-flow/merge@hotfix/missing-fetch
       with:
         source-branch: ${{ github.ref_name }}
-        target-branch: origin/develop
+        target-branch: develop
