@@ -54,4 +54,5 @@ jobs:
     - name: Merge Release to Develop
       if: startsWith(github.ref_name, 'release/')
       run: gh workflow run mf-merge-from-release.yml --ref develop -f release-branch=${{ github.ref_name }}
-
+      env:
+        GH_TOKEN: ${{ github.token }}
