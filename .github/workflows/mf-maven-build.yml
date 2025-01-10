@@ -56,4 +56,4 @@ jobs:
       uses: maven-flow/merge@v1
       with:
         source-branch: ${{ github.ref_name }}
-        target-branch: develop
+        target-branch: origin/develop
