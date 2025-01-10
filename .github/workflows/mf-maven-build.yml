@@ -50,3 +50,10 @@ jobs:
         done
       env:
         GH_TOKEN: ${{ github.token }}
+
+    - name: Merge Release to Develop
+      if: startsWith(github.ref_name, 'release/')
+      uses: maven-flow/merge@v1
+      with:
+        source-branch: ${{ github.ref_name }}
+        target-branch: develop
