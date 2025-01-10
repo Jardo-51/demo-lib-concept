@@ -53,7 +53,5 @@ jobs:
 
     - name: Merge Release to Develop
       if: startsWith(github.ref_name, 'release/')
-      uses: maven-flow/merge@hotfix/missing-fetch
-      with:
-        source-branch: ${{ github.ref_name }}
-        target-branch: develop
+      run: gh workflow run mf-merge-from-release.yml --ref develop -f release-branch=${{ github.ref_name }}
+
