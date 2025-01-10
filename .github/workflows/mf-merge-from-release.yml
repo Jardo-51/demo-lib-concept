@@ -25,6 +25,8 @@ jobs:
       with:
         source-branch: ${{ inputs.release-branch }}
         target-branch: ${{ github.ref_name }}
+      env:
+        GH_TOKEN: ${{ github.token }}
 
     # ensure build is not broken after the merge
     - name: Run Build
