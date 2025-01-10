@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  merge-from-develop:
+  merge-from-release:
     runs-on: ubuntu-latest
     permissions:
       actions: write
