@@ -21,7 +21,7 @@ jobs:
         fetch-depth: 0                  # the full GIT history needs to be checked out
 
     - name: Merge from Develop to PR
-      uses: maven-flow/merge@hotfix/missing-fetch
+      uses: maven-flow/merge@v1
       with:
         source-branch: ${{ inputs.release-branch }}
         target-branch: ${{ github.ref_name }}
