@@ -53,7 +53,7 @@ jobs:
 
     - name: Merge Release to Develop
       if: startsWith(github.ref_name, 'release/')
-      uses: maven-flow/merge@v1
+      uses: maven-flow/merge@hotfix/missing-fetch
       with:
         source-branch: ${{ github.ref_name }}
         target-branch: origin/develop
